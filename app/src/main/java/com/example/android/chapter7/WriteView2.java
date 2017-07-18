@@ -45,7 +45,8 @@ public class WriteView2 extends View {
         mCanvas = new Canvas();
         mBitmap = null;
         init = true;
-
+//        mBitmap = Bitmap.createBitmap(1080, 1920, Bitmap.Config.ARGB_8888);
+//        mCanvas.setBitmap(mBitmap);
     }
 
     @Override
@@ -64,12 +65,13 @@ public class WriteView2 extends View {
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                mPath.moveTo(currentX, currentY);
+                mPath.moveTo(event.getX(), event.getY());
                 break;
             case MotionEvent.ACTION_MOVE:
                 mPath.quadTo(currentX, currentY, event.getX(), event.getY());
                 currentX = event.getX();
                 currentY = event.getY();
+//                mPath.lineTo(event.getX(),event.getY());
                 break;
             case MotionEvent.ACTION_UP:
                 mPath.quadTo(currentX, currentY, event.getX(), event.getY());

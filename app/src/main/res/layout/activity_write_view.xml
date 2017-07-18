@@ -7,9 +7,15 @@
     tools:context="com.example.android.chapter7.WriteViewActivity">
 
     <com.example.android.chapter7.WriteView1
-        android:id="@+id/write_view"
+        android:id="@+id/write_view1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone" />
+
+    <com.example.android.chapter7.WriteView2
+        android:id="@+id/write_view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
 
 </RelativeLayout>
